@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Register/Sign in</title>
+<link rel='stylesheet' href='page.css' type='text/css' />      
+</head>
+<body onload='document.form1.mail1.focus()'>
+<div class="mail">
+<h2>Register</h2>
+<form name="form1" action="#"> 
+<ul>
+<li><input type='text' name='mail1' placeholder='email or phone number' required/></li>
+<li>&nbsp;</li>
+<li><input type='password' name='password' placeholder='password' required/></li>
+<li>&nbsp;</li>
+<li><input type='password' name='passwordVerify' placeholder='password' required/></li>
+<li>&nbsp;</li>
+<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Currency</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">&#8364; Euro</a>
+    <a href="#">&#8383; Bitcoin</a>
+    <a href="#">&#8381; Ruble</a>
+  </div>
+</div>
+<li>&nbsp;</li>
+
+<input type="checkbox" name="terms" id="terms"  required>  Terms & Coditions
+<li>&nbsp;</li>
+<input type="checkbox" name="promoting" id="promoting" >  Subscribe to news.
+<li>&nbsp;</li>
+<li class="submit"><input type="button" name="submit" value="Submit" onclick="Spinner(); ValidateEmail(document.form1.mail1)" /></li>
+<div class="loader">
+  <div class="loading">
+  </div>
+</div>
+<li>&nbsp;</li>
+
+</ul>
+</form>
+<div class="signin">
+  <p>Already have an account? <a href="login.html">Sign in</a>.</p>
+  </div>
+</div>
+<script src="validate.js"></script>
+</body>
+<script>
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script>
+
+
+</html>

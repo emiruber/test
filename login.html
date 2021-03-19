@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Register/Sign in</title>
+<link rel='stylesheet' href='page.css' type='text/css' />      
+</head>
+<body onload='document.form1.text1.focus()'>
+<div class="mail">
+<h2>Sign in</h2>
+<form name="form1" action="#"> 
+<ul>
+<li><input type='text' name='mail' placeholder='email or phone number' required/></li>
+<li>&nbsp;</li>
+<li><input type='text' name='password' placeholder='password' required/></li>
+<li>&nbsp;</li>
+<li class="submit"><input type="submit" name="submit" value="Submit" onclick="ValidateEmail(document.form1.text1)"/></li>
+<li>&nbsp;</li>
+</ul>
+</form>
+<div class="signin">
+  <p>Don't have an account? <a href="pageregister.html">Register</a>.</p>
+  </div>
+</div>
+<script src="validate.js"></script>
+</body>
+</html>
